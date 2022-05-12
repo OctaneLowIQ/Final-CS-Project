@@ -1,0 +1,41 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class GUIPanel extends JPanel
+
+{
+   private JTextField redVal;
+   private JTextField greenVal;
+   private JTextField blueVal;
+   private JTextField heightVal;
+   private JTextField widthVal;
+   
+   public GUIPanel()
+   {
+      setLayout(new BorderLayout());
+   
+      JLabel title = new JLabel("StrataChess!");
+      title.setFont(new Font("Serif", Font.BOLD, 20));
+      title.setHorizontalAlignment(SwingConstants.CENTER);
+      add(title, BorderLayout.NORTH);
+      
+      JButton southSubpanel = new JButton();
+      southSubpanel.setLayout(new GridLayout(1,4)); 
+      
+      JButton empty = new JButton("Settings");
+      southSubpanel.add(empty);
+      
+      JButton Play = new JButton("Play");
+      southSubpanel.add(Play);
+      
+      JButton Instructions = new JButton("Instructions");
+      southSubpanel.add(Instructions);
+      
+      JButton Credits = new JButton("Credits");
+      southSubpanel.add(Credits);
+      
+      JButton empty2 = new JButton("Creator's Note");
+      southSubpanel.add(empty2);
+      
+      add(southSubpanel, BorderLayout.SOUTH);
